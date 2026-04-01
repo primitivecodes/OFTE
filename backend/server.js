@@ -10,6 +10,7 @@ const adminRoutes = require('./routes/admin');
 const moduleRoutes = require('./routes/modules');
 const submissionRoutes = require('./routes/submissions');
 const certificateRoutes = require('./routes/certificates');
+const portfolioRoutes = require('./routes/portfolio');
 
 // Middleware
 const rateLimiter = require('./middleware/rateLimiter');
@@ -32,6 +33,7 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/modules', moduleRoutes);
 app.use('/api/submissions', submissionRoutes);
 app.use('/api/certificates', certificateRoutes);
+app.use('/api/portfolio', portfolioRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
